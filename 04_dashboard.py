@@ -59,6 +59,7 @@ ACCENT     = "#FF4D00"
 ACCENT2    = "#FFB300"
 BLUE       = "#58A6FF"
 GREEN      = "#3FB950"
+RED = "#F85149"
 
 PLOTLY_TEMPLATE = dict(
     layout=dict(
@@ -386,7 +387,7 @@ def update_tabs(tab, year, crime):
 
         colors = [RED if r < 15 else ACCENT2 if r < 30 else GREEN
                   for r in arrest_by_type["rate"]]
-        RED = "#F85149"
+        
 
         fig_arrest = go.Figure(go.Bar(
             x=arrest_by_type["rate"],
